@@ -1,10 +1,19 @@
 class Solution {
     public int mySqrt(int x) {
-        int i=1;
+        int left=1;
+        int right=x/2;
 
-        while((long)i*i<=x){
-            i++;
+        if(x<2) return x;
+        while(left<=right){
+            int mid=left+(right-left)/2;
+
+            if((long)mid*mid==x )
+                return mid;
+            else if((long)mid*mid<x)
+                left=mid+1;
+            else
+                right=mid-1;        
         }
-        return i-1;
+        return right;
     }
 }
