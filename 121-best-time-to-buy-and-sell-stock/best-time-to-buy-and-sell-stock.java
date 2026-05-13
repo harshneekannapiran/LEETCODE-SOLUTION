@@ -8,10 +8,10 @@ class Solution {
             if(prices[i]<minprice){
                 minprice=prices[i];
             }
-
-            int profit=prices[i]-minprice;
-
-            maxprofit=Math.max(maxprofit,profit);
+            else{
+                int profit=prices[i]-minprice;
+                 maxprofit=Math.max(maxprofit,profit);
+            }
          }
          return maxprofit;
     }
