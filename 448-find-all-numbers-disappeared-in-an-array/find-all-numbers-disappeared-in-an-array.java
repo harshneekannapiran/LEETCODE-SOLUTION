@@ -9,7 +9,7 @@ class Solution {
 
          List<Integer>ans=new ArrayList<>();
 
-         for(int i=1;i<n+1;i++){
+         for(int i=1;i<=n;i++){
                 if(freq[i]==0){
                     ans.add(i);
                 }
