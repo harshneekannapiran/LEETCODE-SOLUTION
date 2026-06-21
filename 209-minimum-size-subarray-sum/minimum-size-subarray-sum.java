@@ -2,8 +2,9 @@ class Solution {
     public int minSubArrayLen(int target, int[] nums) {
         int left=0;
         int sum=0;
+        int right=0;
         int min=Integer.MAX_VALUE;
-        for(int right=0;right<nums.length;right++){
+        while(right<nums.length){
             sum+=nums[right];
         
         while(sum>=target){
@@ -11,6 +12,7 @@ class Solution {
                 sum-=nums[left];
                 left++;
         }
+        right++;
         }
         return min==Integer.MAX_VALUE?0:min;
     }
