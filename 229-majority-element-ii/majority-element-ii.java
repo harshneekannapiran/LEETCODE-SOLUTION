@@ -7,10 +7,11 @@ class Solution {
 
         for(int n:nums){
             map.put(n,map.getOrDefault(n,0)+1);
+        }
 
-            if(map.get(n)>nl/3 && !list.contains(n)){
-                list.add(n);
-            }   
+        for(int key:map.keySet()){
+            if(map.get(key)>nl/3)
+                list.add(key);
         }
         return list;
     }
