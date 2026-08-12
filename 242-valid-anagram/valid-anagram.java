@@ -8,6 +8,7 @@ class Solution {
 
          for(char ch:t.toCharArray()){
             freq[ch-'a']--;
+            if(freq[ch-'a']<0) return false;
         }
 
         for(int count:freq){
