@@ -4,15 +4,13 @@ class Solution {
         int left=0;
         int right=s.length()-1;
         while(left<right){
-            while(left<right && (!Character.isLetterOrDigit(s.charAt(left)))){
+            while(left<right && (!Character.isLetterOrDigit(s.charAt(left))))
                 left++;
-            }
-             while(left<right && (!Character.isLetterOrDigit(s.charAt(right)))){
+            while(left<right && (!Character.isLetterOrDigit(s.charAt(right))))
                 right--;
-            }
-            if(s.charAt(left)!=s.charAt(right)){
+            if(s.charAt(left)!=s.charAt(right))
                 return false;
-            }
+            
             left++;
             right--;
         }
